@@ -1,0 +1,21 @@
+#N canvas 721 389 386 228 10;
+#X obj 128 47 fiddle~;
+#X obj 128 13 adc~;
+#X floatatom 128 80 5 0 0 0 - - -;
+#X msg 17 45 \; pd dsp 1;
+#X obj 131 179 hsl 128 15 100 10000 1 0 empty empty empty -2 -8 0 10
+-262144 -1 -1 0 1;
+#X obj 128 112 mtof;
+#X floatatom 128 145 5 0 0 0 - - -;
+#X text 162 12 <= analogue-to-digital conversion;
+#X text 180 46 <= frequency estimator;
+#X text 168 79 <= frequency (MIDI);
+#X text 165 144 <= frequency (Hz);
+#X text 163 111 <= MIDI to Hz conversion;
+#X obj 17 13 loadbang;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 2 0 5 0;
+#X connect 5 0 6 0;
+#X connect 6 0 4 0;
+#X connect 12 0 3 0;

@@ -1,0 +1,48 @@
+#N canvas 751 134 397 462 10;
+#X obj 69 370 output~;
+#X obj 145 370 wsprobe~;
+#X obj 96 294 notch;
+#X obj 243 239 t b f;
+#X obj 246 190 hsl 128 15 0 100 0 0 empty empty Bandwidth -2 -8 0 10
+-262144 -1 -1 12700 1;
+#X floatatom 243 215 5 0 0 0 - - -;
+#X obj 99 191 hsl 128 15 1400 1600 0 0 empty empty Frequency -2 -8
+0 10 -262144 -1 -1 6300 1;
+#X floatatom 96 215 5 0 0 0 - - -;
+#X obj 18 143 readsf~;
+#X obj 96 -12 loadbang;
+#X msg 43 114 start;
+#X obj 18 34 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 18 87 open speech.wav;
+#X obj 43 60 delay 500;
+#X obj 20 244 osc~ 1500;
+#X msg 96 152 1400;
+#X msg 243 151 0;
+#X obj 96 320 biquad~;
+#X text 155 320 <= notch filter;
+#X text 84 243 <= interfering tone;
+#X connect 2 0 17 0;
+#X connect 3 0 2 0;
+#X connect 3 1 2 1;
+#X connect 4 0 5 0;
+#X connect 5 0 3 0;
+#X connect 6 0 7 0;
+#X connect 7 0 2 0;
+#X connect 8 0 17 0;
+#X connect 8 1 11 0;
+#X connect 9 0 12 0;
+#X connect 9 0 11 0;
+#X connect 9 0 15 0;
+#X connect 9 0 16 0;
+#X connect 10 0 8 0;
+#X connect 11 0 12 0;
+#X connect 11 0 13 0;
+#X connect 12 0 8 0;
+#X connect 13 0 10 0;
+#X connect 14 0 17 0;
+#X connect 15 0 6 0;
+#X connect 16 0 4 0;
+#X connect 17 0 0 0;
+#X connect 17 0 0 1;
+#X connect 17 0 1 0;

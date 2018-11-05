@@ -1,0 +1,28 @@
+#N canvas 245 431 386 300 10;
+#X obj 114 10 adc~;
+#X obj 115 37 env~;
+#X obj 116 164 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
+#X floatatom 115 67 5 0 0 0 - - -;
+#X floatatom 115 128 5 0 0 0 - - -;
+#X msg 12 59 \; pd dsp 1;
+#X obj 12 27 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 13 129 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 13 161 \; pd dsp 0;
+#X text 4 2 START;
+#X text 8 107 STOP;
+#X text 154 9 <= analogue-to-digital converter;
+#X text 155 36 <= envelope follower;
+#X text 156 66 <= RMS amplitude (dB);
+#X obj 115 96 - 75;
+#X text 157 127 <= scaled RMS amplitude (dB);
+#X text 175 212 VU METER;
+#X text 156 95 <= scale to 'volume units' (VU);
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 3 0 14 0;
+#X connect 4 0 2 0;
+#X connect 6 0 5 0;
+#X connect 7 0 8 0;
+#X connect 14 0 4 0;

@@ -1,0 +1,17 @@
+#N canvas 26 23 417 144 10;
+#X obj 10 -5 loadbang;
+#X msg 10 24 \; pd dsp 1;
+#X obj 143 65 fexpr~ $f2*$y+$x;
+#X obj 239 11 hsl 128 15 0 1.1 0 0 empty empty a -2 -8 0 10 -262144
+-1 -1 10700 1;
+#X msg 89 38 clear;
+#X floatatom 236 37 5 0 0 0 - - -;
+#X text 245 65 <= difference equation;
+#X obj 143 38 noise~;
+#X obj 144 95 wsprobe~;
+#X connect 0 0 1 0;
+#X connect 2 0 8 0;
+#X connect 3 0 5 0;
+#X connect 4 0 2 0;
+#X connect 5 0 2 1;
+#X connect 7 0 2 0;
