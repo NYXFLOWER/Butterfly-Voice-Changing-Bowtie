@@ -1,0 +1,13 @@
+#N canvas 281 314 723 534 10;
+#X obj 194 102 adc~;
+#X obj 194 172 wsprobe~;
+#X obj 327 67 hsl 128 15 0 10000 0 0 empty empty cut-off_frequency
+-2 -8 0 10 -262144 -1 -1 12700 1;
+#X floatatom 324 98 5 0 0 0 - - -;
+#X obj 303 171 wsprobe~;
+#X obj 303 134 hip~;
+#X connect 0 0 1 0;
+#X connect 0 0 5 0;
+#X connect 2 0 3 0;
+#X connect 3 0 5 1;
+#X connect 5 0 4 0;

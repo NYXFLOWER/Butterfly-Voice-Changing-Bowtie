@@ -1,0 +1,46 @@
+#N canvas 62 143 1049 774 10;
+#X obj 165 17 loadbang;
+#X obj 165 45 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 165 80 open speech.wav;
+#X obj 166 117 readsf~;
+#X obj 152 258 output~;
+#X obj 263 261 wsprobe~;
+#X obj 80 68 delay 500;
+#X msg 80 89 start;
+#X obj 190 152 hsl 128 15 0 10000 0 0 empty empty cut-off_frequency
+-2 -8 0 10 -262144 -1 -1 12700 1;
+#X floatatom 187 179 5 0 0 0 - - -;
+#X msg 394 228 start;
+#X msg 504 216 open speech.wav;
+#X obj 504 256 readsf~;
+#X obj 504 321 output~;
+#X obj 504 169 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 627 318 wsprobe~;
+#X text 701 317 display the waveform and spectrum in real-time;
+#X obj 394 200 delay 500;
+#X obj 166 215 hip~;
+#X connect 0 0 1 0;
+#X connect 0 0 14 0;
+#X connect 1 0 2 0;
+#X connect 1 0 6 0;
+#X connect 2 0 3 0;
+#X connect 3 0 18 0;
+#X connect 3 1 1 0;
+#X connect 6 0 7 0;
+#X connect 7 0 3 0;
+#X connect 8 0 9 0;
+#X connect 9 0 18 1;
+#X connect 10 0 12 0;
+#X connect 11 0 12 0;
+#X connect 12 0 13 0;
+#X connect 12 0 13 1;
+#X connect 12 0 15 0;
+#X connect 12 1 14 0;
+#X connect 14 0 11 0;
+#X connect 14 0 17 0;
+#X connect 17 0 10 0;
+#X connect 18 0 4 0;
+#X connect 18 0 5 0;
+#X connect 18 0 4 1;
