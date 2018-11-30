@@ -1,0 +1,35 @@
+#N canvas 1179 388 844 610 10;
+#X obj 142 112 hsl 128 15 0 1 0 0 empty empty Mixer-manipulation_rate
+5 -8 0 10 -262144 -1 -1 0 1;
+#X floatatom 139 174 5 0 0 0 - - -;
+#X floatatom 81 258 5 0 0 0 - - -;
+#X msg 139 60 0;
+#X obj 124 295 *~;
+#X obj 66 294 *~;
+#X obj 65 352 +~;
+#X text 125 112 0;
+#X text 275 111 1;
+#X obj 81 220 -;
+#X msg 81 176 1;
+#X obj 81 146 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 65 22 inlet~;
+#X obj 125 22 inlet~;
+#X obj 65 386 outlet~;
+#X obj 157 220 outlet;
+#X connect 0 0 1 0;
+#X connect 0 0 11 0;
+#X connect 1 0 4 1;
+#X connect 1 0 9 1;
+#X connect 1 0 15 0;
+#X connect 2 0 5 1;
+#X connect 3 0 0 0;
+#X connect 4 0 6 1;
+#X connect 5 0 6 0;
+#X connect 6 0 14 0;
+#X connect 9 0 2 0;
+#X connect 10 0 9 0;
+#X connect 11 0 10 0;
+#X connect 12 0 5 0;
+#X connect 13 0 4 0;
+#X coords 0 -1 1 1 180 60 1 120 80;

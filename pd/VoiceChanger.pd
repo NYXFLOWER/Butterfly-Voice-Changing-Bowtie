@@ -1,0 +1,27 @@
+#N canvas 927 509 1262 1108 10;
+#X text 138 90 Live input;
+#X text 139 68 File input;
+#X obj 113 67 vradio 20 1 0 2 empty empty empty 0 -8 0 10 -262144 -1
+-1 0;
+#X text 680 180 Mixer;
+#X text 677 229 Delay;
+#X text 679 144 Freqency Shift;
+#X text 108 128;
+#X text 109 139 example sound:;
+#X text 140 163 Lord of the Rings - Gollum;
+#X text 139 183 Star Wars - C3PO;
+#X text 139 203 Dr. Who - Daleks;
+#X text 821 12 LFO;
+#X text 678 103 tremolo;
+#X text 679 121 ring;
+#X text 679 201 vibrato;
+#X obj 113 160 vradio 20 1 0 4 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X text 139 221 None;
+#X text 111 45 input setting:;
+#X text 110 254 Draft Feature:;
+#X obj 114 277 vradio 20 1 0 2 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X text 139 298 None;
+#X text 139 277 Underwater;
+#X obj 822 30 LFO~;
