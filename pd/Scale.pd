@@ -1,0 +1,29 @@
+#N canvas 819 736 845 534 10;
+#X msg 453 60 1;
+#X obj 385 62 inlet;
+#X obj 226 132 hsl 128 15 0 1 0 0 empty empty Scale 50 -8 0 10 -262144
+-1 -1 12700 1;
+#X floatatom 385 132 5 0 0 0 - - -;
+#X text 220 144 0;
+#X obj 385 110 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 402 109 RESET;
+#X obj 453 23 loadbang;
+#X text 350 145 1;
+#X obj 177 59 inlet~;
+#X text 179 44 audio;
+#X text 387 46 reset;
+#X obj 270 57 inlet;
+#X obj 178 199 *~;
+#X text 273 42 rate;
+#X obj 177 236 outlet~;
+#X connect 0 0 2 0;
+#X connect 1 0 5 0;
+#X connect 2 0 3 0;
+#X connect 3 0 13 1;
+#X connect 5 0 0 0;
+#X connect 7 0 0 0;
+#X connect 9 0 13 0;
+#X connect 12 0 3 0;
+#X connect 13 0 15 0;
+#X coords 0 -1 1 1 240 60 1 200 100;

@@ -1,27 +1,75 @@
-#N canvas 927 509 1262 1108 10;
-#X text 138 90 Live input;
-#X text 139 68 File input;
-#X obj 113 67 vradio 20 1 0 2 empty empty empty 0 -8 0 10 -262144 -1
+#N canvas 1040 90 1255 894 10;
+#X text 446 -112 Live input;
+#X text 445 -92 File input;
+#X obj 417 -114 vradio 20 1 0 2 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X text 444 -18 Lord of the Rings - Gollum;
+#X text 443 2 Star Wars - C3PO;
+#X text 443 22 Dr. Who - Daleks;
+#X obj 417 -21 vradio 20 1 0 4 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X text 443 40 None;
+#X text 415 -136 input setting:;
+#X text 414 73 Draft Feature:;
+#X obj 418 96 vradio 20 1 0 2 empty empty empty 0 -8 0 10 -262144 -1
 -1 0;
-#X text 680 180 Mixer;
-#X text 677 229 Delay;
-#X text 679 144 Freqency Shift;
-#X text 108 128;
-#X text 109 139 example sound:;
-#X text 140 163 Lord of the Rings - Gollum;
-#X text 139 183 Star Wars - C3PO;
-#X text 139 203 Dr. Who - Daleks;
-#X text 821 12 LFO;
-#X text 678 103 tremolo;
-#X text 679 121 ring;
-#X text 679 201 vibrato;
-#X obj 113 160 vradio 20 1 0 4 empty empty empty 0 -8 0 10 -262144
--1 -1 0;
-#X text 139 221 None;
-#X text 111 45 input setting:;
-#X text 110 254 Draft Feature:;
-#X obj 114 277 vradio 20 1 0 2 empty empty empty 0 -8 0 10 -262144
--1 -1 0;
-#X text 139 298 None;
-#X text 139 277 Underwater;
-#X obj 822 30 LFO~;
+#X text 443 117 None;
+#X text 443 96 Underwater;
+#X obj 666 -125 LFO~;
+#X msg 525 -92 open speech.wav;
+#X text 413 -42 example sound:;
+#X obj 256 -8 == 0;
+#X obj 161 -8 == 1;
+#X text 164 -25 File Input;
+#X text 257 -24 Live Input;
+#X obj 97 9 *~;
+#X obj 226 18 adc~;
+#X obj 241 50 *~;
+#X floatatom 161 -51 5 0 0 0 - - -;
+#X msg 97 -54 start;
+#X obj 97 -23 readsf~;
+#X obj 97 -119 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 97 -81 delay 50;
+#X obj 96 83 s~ audio;
+#X obj 453 389 Mixer~;
+#X obj 417 167 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 413 148 Advanced Mode;
+#X obj 666 119 Delay~;
+#X obj 923 -123 Scale;
+#X text 414 205 Reset All;
+#X obj 341 267 s reset;
+#X obj 1187 -29 r reset;
+#X obj 975 429 r reset;
+#X obj 1184 56 r reset;
+#X obj 416 228 bng 25 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 1193 -164 r reset;
+#X obj 926 -167 r reset;
+#X obj 923 -39 s~ lfo;
+#X obj 49 204;
+#X obj 666 31 FrequencyShift~;
+#X connect 2 0 23 0;
+#X connect 13 0 33 0;
+#X connect 14 0 25 0;
+#X connect 16 0 22 1;
+#X connect 17 0 20 1;
+#X connect 20 0 28 0;
+#X connect 21 0 22 0;
+#X connect 22 0 28 0;
+#X connect 23 0 16 0;
+#X connect 23 0 17 0;
+#X connect 24 0 25 0;
+#X connect 25 0 20 0;
+#X connect 25 1 26 0;
+#X connect 26 0 27 0;
+#X connect 26 0 14 0;
+#X connect 27 0 24 0;
+#X connect 33 0 42 0;
+#X connect 36 0 44 2;
+#X connect 37 0 29 3;
+#X connect 38 0 32 2;
+#X connect 39 0 35 0;
+#X connect 40 0 33 2;
+#X connect 41 0 13 2;

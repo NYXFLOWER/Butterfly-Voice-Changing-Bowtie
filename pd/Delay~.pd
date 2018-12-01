@@ -1,0 +1,34 @@
+#N canvas 730 608 966 586 10;
+#X obj 31 327 +~;
+#X obj 93 85 delwrite~ delayline 1000;
+#X obj 105 151 hsl 128 15 0 1000 0 0 empty empty Delay 50 -8 0 10 -262144
+-1 -1 0 1;
+#X floatatom 264 151 5 0 0 0 - - -;
+#X obj 98 234 sig~;
+#X obj 97 295 vd~ delayline;
+#X text 99 163 0;
+#X text 221 163 1000;
+#X obj 97 265 *~;
+#X obj 31 47 inlet~;
+#X text 30 28 audio;
+#X obj 102 45 inlet;
+#X text 99 28 delay;
+#X obj 264 129 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 281 128 RESET;
+#X msg 176 42 0;
+#X obj 264 41 inlet;
+#X obj 30 359 outlet~;
+#X connect 0 0 17 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 8 0;
+#X connect 5 0 0 1;
+#X connect 8 0 5 0;
+#X connect 9 0 0 0;
+#X connect 9 0 1 0;
+#X connect 11 0 2 0;
+#X connect 13 0 15 0;
+#X connect 15 0 2 0;
+#X connect 16 0 13 0;
+#X coords 0 -1 1 1 240 60 1 80 120;
