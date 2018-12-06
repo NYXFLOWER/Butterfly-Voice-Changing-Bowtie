@@ -1,4 +1,7 @@
-#N canvas 1048 224 694 602 16;
+#N canvas 238 129 694 602 16;
 #X obj 194 102 adc~;
-#X obj 194 131 wsprobe~;
+#X obj 368 177 wsprobe~;
+#X obj 235 300 output~;
 #X connect 0 0 1 0;
+#X connect 0 0 2 0;
+#X connect 0 0 2 1;

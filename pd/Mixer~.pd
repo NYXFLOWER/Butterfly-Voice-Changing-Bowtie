@@ -1,4 +1,4 @@
-#N canvas 800 644 844 610 10;
+#N canvas 710 349 844 610 10;
 #X obj 188 110 hsl 128 15 0 1 0 0 empty empty Mixer 50 -8 0 10 -262144
 -1 -1 0 1;
 #X floatatom 345 109 5 0 0 0 - - -;
@@ -44,6 +44,7 @@
 #X connect 13 0 4 0;
 #X connect 16 0 3 0;
 #X connect 18 0 3 0;
+#X connect 18 0 11 0;
 #X connect 19 0 16 0;
 #X connect 20 0 1 0;
 #X coords 0 -1 1 1 240 60 1 160 80;
