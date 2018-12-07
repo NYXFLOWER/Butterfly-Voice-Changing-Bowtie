@@ -1,6 +1,6 @@
-#N canvas 582 286 998 639 10;
+#N canvas 156 284 998 771 10;
 #X obj 131 138 vradio 20 1 0 3 empty empty empty 0 -8 0 10 -262144
--1 -1 0;
+-1 -1 2;
 #X text 157 144 <-Lord of the Rings - Gollum;
 #X text 156 164 <-Star Wars - C3PO;
 #X text 156 184 <-Dr. Who - Daleks;
@@ -20,7 +20,7 @@
 #X msg 347 350 30;
 #X obj 334 432 *~;
 #X obj 131 238 select 0 1 2;
-#X obj 261 109 tgl 25 0 empty empty empty 17 7 0 10 -204786 -1 -1 0
+#X obj 261 109 tgl 25 0 empty empty empty 17 7 0 10 -204786 -1 -1 1
 1;
 #X msg 86 412 1;
 #X msg 119 412 0;
@@ -33,6 +33,19 @@
 #X msg 86 352 950;
 #X text 289 120 Active;
 #X text 202 109 -------->;
+#X obj 427 -75 loadbang;
+#X obj 427 -41 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 427 32 open speech.wav;
+#X obj 312 -2 delay 500;
+#X msg 312 32 start;
+#X obj 427 78 readsf~;
+#X obj 479 142 output~;
+#X obj 189 556 output~;
+#X obj 131 18 loadbang;
+#X msg 131 57 0;
+#X obj 291 516 output~;
+#X obj 437 467 output~;
 #X connect 0 0 19 0;
 #X connect 5 0 12 0;
 #X connect 6 0 5 2;
@@ -42,11 +55,17 @@
 #X connect 10 0 8 2;
 #X connect 11 0 8 3;
 #X connect 12 0 27 0;
+#X connect 12 0 39 0;
+#X connect 12 0 39 1;
 #X connect 13 0 27 0;
+#X connect 13 0 42 0;
+#X connect 13 0 42 1;
 #X connect 15 0 18 0;
 #X connect 16 0 15 2;
 #X connect 17 0 15 1;
 #X connect 18 0 27 0;
+#X connect 18 0 43 0;
+#X connect 18 0 43 1;
 #X connect 19 0 21 0;
 #X connect 19 0 24 0;
 #X connect 19 0 26 0;
@@ -68,4 +87,19 @@
 #X connect 28 0 8 0;
 #X connect 28 0 15 0;
 #X connect 29 0 5 1;
+#X connect 32 0 33 0;
+#X connect 33 0 34 0;
+#X connect 33 0 35 0;
+#X connect 34 0 37 0;
+#X connect 35 0 36 0;
+#X connect 36 0 37 0;
+#X connect 37 0 38 0;
+#X connect 37 0 38 1;
+#X connect 37 0 5 0;
+#X connect 37 0 8 0;
+#X connect 37 0 15 0;
+#X connect 37 1 33 0;
+#X connect 40 0 41 0;
+#X connect 41 0 0 0;
+#X connect 41 0 20 0;
 #X coords 0 -1 1 1 250 110 2 100 100;
