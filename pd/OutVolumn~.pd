@@ -1,0 +1,21 @@
+#N canvas 615 260 1054 357 10;
+#X obj 150 113 hsl 140 20 0.1 10 1 0 empty empty Output_Volumn 35 10
+0 10 -261234 -13381 -86277 200 1;
+#X obj 97 50 inlet~;
+#X obj 97 182 *~;
+#X text 137 131 0.1;
+#X text 285 132 10;
+#X floatatom 302 118 5 0 0 0 - - -;
+#X obj 122 117 bng 15 250 50 0 empty empty empty 17 7 0 10 -261682
+-1 -1;
+#X obj 97 220 outlet~;
+#X msg 147 75 1;
+#X obj 147 50 loadbang;
+#X connect 0 0 5 0;
+#X connect 1 0 2 0;
+#X connect 2 0 7 0;
+#X connect 5 0 2 1;
+#X connect 6 0 8 0;
+#X connect 8 0 0 0;
+#X connect 9 0 8 0;
+#X coords 0 -1 1 1 250 48 2 100 100;

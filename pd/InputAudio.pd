@@ -1,0 +1,43 @@
+#N canvas 760 124 805 721 10;
+#X obj 263 159 bng 25 250 50 0 empty empty empty 17 7 0 10 -204786
+-1 -1;
+#X obj 264 251 openpanel;
+#X obj 264 341 readsf~;
+#X obj 122 132 vradio 25 1 0 2 empty empty empty 0 -8 0 10 -261682
+-1 -1 1;
+#X obj 187 250 == 0;
+#X obj 97 250 == 1;
+#X text 181 233 Live Input;
+#X obj 81 417 *~;
+#X obj 360 343 adc~;
+#X obj 171 419 *~;
+#X floatatom 122 209 5 0 0 0 - - -;
+#X msg 283 310 start;
+#X obj 171 553 outlet~;
+#X msg 264 280 open \$1;
+#X msg 227 310 stop;
+#X text 362 155 You need set the 'Input Setting' to 'File Input' then
+'Open Audio File'.;
+#X text 261 141 Open File:;
+#X text 150 141 Live Sound;
+#X text 95 234 Audio Input;
+#X obj 325 551 wsprobe~;
+#X text 151 170 Audio Input------>;
+#X connect 0 0 1 0;
+#X connect 1 0 13 0;
+#X connect 2 0 7 0;
+#X connect 3 0 10 0;
+#X connect 4 0 9 1;
+#X connect 4 0 14 0;
+#X connect 5 0 7 1;
+#X connect 7 0 12 0;
+#X connect 8 0 9 0;
+#X connect 9 0 12 0;
+#X connect 9 0 19 0;
+#X connect 10 0 4 0;
+#X connect 10 0 5 0;
+#X connect 11 0 2 0;
+#X connect 13 0 2 0;
+#X connect 13 0 11 0;
+#X connect 14 0 2 0;
+#X coords 0 -1 1 1 250 95 2 100 100;

@@ -1,0 +1,33 @@
+#N canvas 56 22 1604 959 10;
+#X obj 45 257 SoundEffectBasis~;
+#X obj 45 175 outlet~;
+#X obj 871 104 tgl 25 0 empty empty empty 17 7 0 10 -204786 -1 -1 0
+1;
+#X obj 741 133 vradio 20 1 0 2 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X text 767 138 <-UnderWater;
+#X text 767 158 <-Chorus;
+#X floatatom 740 182 5 0 0 0 - - -;
+#X floatatom 772 182 5 0 0 0 - - -;
+#X floatatom 805 182 5 0 0 0 - - -;
+#X floatatom 837 182 5 0 0 0 - - -;
+#X floatatom 870 182 5 0 0 0 - - -;
+#X floatatom 902 182 5 0 0 0 - - -;
+#X text 960 165 <- There is a chorus with max 6 channel.;
+#X text 959 182 <- The frequency shift for 6 channel;
+#X obj 45 130 *~;
+#X obj 44 32 inlet~;
+#X text 723 105 Sound Effects: -------->;
+#X text 899 116 Active;
+#X connect 0 0 14 0;
+#X connect 2 0 14 1;
+#X connect 3 0 0 1;
+#X connect 6 0 0 2;
+#X connect 7 0 0 3;
+#X connect 8 0 0 4;
+#X connect 9 0 0 5;
+#X connect 10 0 0 6;
+#X connect 11 0 0 7;
+#X connect 14 0 1 0;
+#X connect 15 0 0 0;
+#X coords 0 -1 1 1 250 110 2 710 95;

@@ -98,10 +98,10 @@
 #X msg 916 173 1;
 #X obj 721 32 inlet;
 #X text 720 15 active;
-#X obj 393 345 delwrite~ \$4-delayline 1000;
-#X obj 364 423 vd~ \$4-delayline;
-#X obj 393 314 r~ \$4-feedback;
-#X obj 504 571 s~ \$4-feedback;
+#X obj 393 345 delwrite~ \$7-delayline 1000;
+#X obj 363 423 vd~ \$7-delayline;
+#X obj 393 314 r~ \$7-feedback;
+#X obj 504 571 s~ \$7-feedback;
 #X connect 0 0 4 0;
 #X connect 2 0 3 0;
 #X connect 3 0 5 0;
