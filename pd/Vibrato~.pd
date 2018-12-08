@@ -1,4 +1,4 @@
-#N canvas 132 223 823 644 10;
+#N canvas 1276 304 823 644 10;
 #X obj 315 60 loadbang;
 #X msg 315 95 0;
 #X obj 318 138 hsl 128 15 -1000 1000 0 0 empty empty Frequency_Shift
@@ -21,10 +21,10 @@
 #X obj 172 467 outlet~;
 #X obj 314 22 inlet;
 #X text 311 7 frequency shift;
-#X obj 431 21 inlet;
-#X text 429 6 speed;
-#X obj 548 23 inlet;
-#X text 545 9 depth;
+#X obj 432 21 inlet;
+#X text 430 6 speed;
+#X obj 509 23 inlet;
+#X text 506 9 depth;
 #X text 173 7 input audio;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;

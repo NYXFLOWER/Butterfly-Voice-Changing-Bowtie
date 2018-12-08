@@ -1,0 +1,33 @@
+#N canvas 1065 541 571 354 10;
+#X obj 12 270 cnv 3 550 3 empty \$0-pddp.cnv.outlets outlets 8 12 0
+13 -228856 -1 0;
+#X obj 87 170 cnv 17 3 17 empty \$0-pddp.cnv.let.0 0 5 9 0 16 -228856
+-162280 0;
+#X text 107 169 float;
+#X obj 87 279 cnv 17 3 17 empty \$0-pddp.cnv.let.0 0 5 9 0 16 -228856
+-162280 0;
+#X obj 87 194 cnv 17 3 17 empty \$0-pddp.cnv.let.1 1 5 9 0 16 -228856
+-162280 0;
+#X text 107 193 float;
+#X text 108 278 signal;
+#X obj 10 10 cnv 15 552 130 empty \$0-pddp.cnv.header LFO~ 3 12 0 18
+-204280 -1 0;
+#X obj 316 20 LFO~;
+#X text 13 39 Low Frequency Oscillator;
+#X obj 13 150 cnv 3 550 3 empty \$0-pddp.cnv.inlets inlets 8 12 0 13
+-228856 -1 0;
+#X obj 88 219 cnv 17 3 17 empty \$0-pddp.cnv.let.1 2 5 9 0 16 -228856
+-162280 0;
+#X text 108 218 bang;
+#X obj 88 244 cnv 17 3 17 empty \$0-pddp.cnv.let.1 3 5 9 0 16 -228856
+-162280 0;
+#X text 108 243 binary;
+#X text 177 169 - an incoming float changes the speed(frequency).;
+#X text 176 193 - a float to set the depth.;
+#X text 177 218 - Reset all the parameters.;
+#X text 179 244 - 0 for sine wave and 1 for square wave.;
+#X text 177 278 - the outgoing sine wave.;
+#X obj 87 305 cnv 17 3 17 empty \$0-pddp.cnv.let.0 1 5 9 0 16 -228856
+-162280 0;
+#X text 108 304 float;
+#X text 177 304 - the depth of low frequency oscillator;
